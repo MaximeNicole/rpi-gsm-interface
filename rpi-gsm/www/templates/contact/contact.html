@@ -1,0 +1,28 @@
+<ion-view>
+  <ion-content>
+    <div class="list card">
+
+      <div class="item item-avatar">
+        <img src="{{ data.contact.picture }}">
+        <h2>{{ contact.firstname }} {{ contact.lastname }}</h2>
+      </div>
+
+      <div class="item item-body">
+        <p>Pseudo: {{ data.contact.nickname }}</p>
+        <p>Email: {{ data.contact.email }}</p>
+        <p>
+          <a class="subdued">1 </a>
+          <a class="subdued">5 </a>
+        </p>
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" ng-href="#/app/contact/{{contact.nickname}}/sms">
+          <i class="icon ion-chatbox"></i>
+          Conversation
+        </a>
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>

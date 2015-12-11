@@ -1,0 +1,21 @@
+<ion-view class="view-conversation">
+
+  <ion-content>
+
+    <ion-list>
+      <ion-item ng-repeat="phone in data.phones" href="#/app/contact/phones/{{contact.nickname}}">
+
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+
+  <ion-footer-bar align-title="left" class="bar-dark" id="chatbox-container">
+    <form class="row">
+        <textarea ng-model="data.message" class="col col-80" id="chatbox" ng-change="funct.countCharacters()"></textarea>
+        <span class="col col-center col-10" id="characters">{{ data.charactersLeft }}</span>
+        <button class="button button-small icon ion-android-send col col-10" ng-click="funct.send()"></button>
+    </form>
+  </ion-footer-bar>
+
+</ion-view>
